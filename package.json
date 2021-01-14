@@ -9,7 +9,8 @@
     "migrate": "postgrator --config postgrator-config.js",
     "start": "node src/server.js",
     "predeploy": "npm audit",
-    "deploy": "git push heroku master"
+    "deploy": "git push heroku main",
+    "postdeploy": "npm run migrate:production"
   },
   "keywords": [],
   "author": "Tom `tomatao` HT <tomht@thinkful.com>",
@@ -23,7 +24,8 @@
     "jsonwebtoken": "^8.5.0",
     "knex": "^0.21.15",
     "morgan": "^1.9.1",
-    "pg": "^7.8.2"
+    "pg": "^7.8.2",
+    "postgrator-cli": "^3.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -31,7 +33,6 @@
     "eslint-plugin-babel": "^5.3.1",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9",
-    "postgrator-cli": "^3.1.0",
     "supertest": "^3.3.0"
   }
 }
