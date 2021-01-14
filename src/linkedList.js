@@ -73,7 +73,6 @@ class LinkedList {
     let previousNode = this.head;
 
     while (currNode !== null && currNode.value !== beforeTarget) {
-      // Save the previous node
       previousNode = currNode;
       currNode = currNode.next;
     }
