@@ -1,7 +1,7 @@
 const express = require('express');
 const LanguageService = require('./language-service');
 const { requireAuth } = require('../middleware/jwt-auth');
-const { LinkedList, toArray, _Node } = require('../linkedList');
+const { toArray, _Node } = require('../linkedList');
 const bodyParser = express.json();
 const languageRouter = express.Router();
 
@@ -38,6 +38,7 @@ languageRouter.get('/', async (req, res, next) => {
 languageRouter.get('/head', async (req, res, next) => {
   try {
     const [nextWord] = await LanguageService.getNextWord(req.app.get('db'), req.language.id);
+    console.log(req.language.id);
     res.json({
       nextWord: nextWord.original,
       totalScore: req.language.total_score,
