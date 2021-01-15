@@ -10,6 +10,12 @@ This Spaced Repetition WebApp allows a user to create a unique username and pass
 
 Though the deployed example is limited in scope, the list of words can be as long as the user likes. 
 
+## Links
+
+Deployed App: https://spaced-repetition-howe-jm.vercel.app/
+API Github: https://github.com/howe-jm/spaced-repetition-server
+Client Github: https://github.com/howe-jm/spaced-repetition-client
+
 ## API
 
 While this API can run independently of the client and be used for a custom client, it is intended to be used with the accompanying Spaced Repetition Client.
@@ -46,7 +52,6 @@ The user can:
 -Track the running total of correct guesses.
 -Track correct and incorrect guesses for each word.
 -Log out of the app.
-
 
 
 ## Local dev setup
